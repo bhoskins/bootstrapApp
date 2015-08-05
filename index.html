@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap App</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles/custom.css" />
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+</head>
+<!--   directive     contr. name       alias -->
+<body>
+
+<!--    Navigation
+      emmet:
+      div.container>nav.row>ul.nav.nav-tabs>li.item$*5>a
+
+      div.containter>div.row>nav.navbar.navbar-default.navbar-fixed-top[role=navigation]>(div.navbar-header>button.nav-bar-toggle[type=button data-toggle=collapse data-target=#collapse]>span.icon-bar*4)+(div.collapse.navbar-collapse#collapse>ul.navbar-nav>(li>a[href=#]{Link $})*5)
+      (must change first span class to sr-only)
+
+      navbar-fixed-top: use body padding-top: 70px to offset
+
+      nav | nav-tabs nav-pills | nav-stacked | nav-justified
+-->
+
+<!-- vertical nav -->
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+            <span class="sr-only">Toggle Navigation</span>
+<!--             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> -->
+            <span class="glyphicon glyphicon-th-list"> Menu</span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Find a Game</a></li>
+            <li><a href="#">Make a Game</a></li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown">Resources
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Spinner</a></li>
+                <li><a href="#">Dice</a></li>
+                <li><a href="#">Timer</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+<!-- horozontal nav -->
+  <div class="container">
+    <nav class="row">
+      <ul class="nav nav-tabs nav-justified">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">Find a Game</a></li>
+        <li><a href="#">Make a Game</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- jumbotron -->
+  <div class="cf jumbotron">
+    <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" class="pull-left col-md-6 img-responsive img-circle">
+    <h2>Bootstrap Jumbotron</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+    </p>
+  </div>
+
+  <!--    Breadcrumb
+        emmet:
+        ol.breadcrumb>li.item$*4>a{Item $}
+  -->
+
+  <ol id="nav" class="breadcrumb">
+     <li class="item1 active"><a href="#">Link 1</a></li>
+     <li class="item2"><a href="#">Link 2</a></li>
+     <li class="item3"><a href="#">Link 3</a></li>
+     <li class="item4"><a href="#">Link 4</a></li>
+   </ol>
+
+
+
+  <div class="container">
+    <!-- row 2 -->
+    <div class="row">
+      <div class="col-md-3 col-sm-6 panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Section 1</h3>
+        </div>
+        <div class="panel-body">
+          <p>Stuff about 1...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+        </div>
+        <div>
+          <a href="#" class="col-md-12 col-xs-12 btn btn-default btn-sm">Default</a>
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" width="300" class="img-responsive img-rounded img-thumbnail">
+          <p>Thumbnail</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-heading"><span class="glyphicon glyphicon-hand-right"></span> Section 2</h3>
+        </div>
+        <div class="panel-body">
+          <p>Stuff about 2...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+        </div>
+        <div class="panel-footer">
+          <a href="#" class="col-md-12 col-xs-12 btn btn-success btn-lg">Success</a>
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" width="300" class="img-responsive img-rounded">
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-heading"><span class="glyphicon glyphicon-screenshot"></span> Section 3</h3>
+        </div>
+        <div class="panel-body">
+          <p>Stuff about 3...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+        </div>
+        <div class="panel-footer">
+          <a href="#" class="col-md-12 col-xs-12 btn btn-warning btn-lg">btn-warning</a>
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" width="300" class="img-responsive img-rounded">
+          <a href="#" class="btn btn-danger btn-block">Danger</a>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-heading"><span class="glyphicon glyphicon-screenshot"></span> Section 4</h3>
+        </div>
+        <div class="panel-body">
+          <p>Stuff about 4...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+        </div>
+       <div class="panel-footer">
+          <a href="#" class="col-md-12 col-xs-12 btn btn-info btn-lg">Info</a>
+         <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" width="300" class="img-responsive img-rounded">
+       </div>
+      </div>
+    </div>
+  </div>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- row 1 -->
+<div class="test row">
+    <h2 class="col-med-12 col-xs-12">Bootstrap Offset/Push/Pull</h2>
+</div>
+
+<!-- row 2 -->
+<div class="row">
+  <article class="col-md-8 col-md-offset-1 col-md-push-3 col-sm-7 col-sm-offset-1 col-sm-push-4">
+    <h3>Right & Top</h3>
+    <p>Stuff about 2...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+  </article>
+
+  <aside class="col-md-3 col-sm-4 col-md-pull-9 col-sm-pull-8">
+    <h3>Left & Bottom</h3>
+    <p>Stuff about 1...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+  </aside>
+
+</div>
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  <!-- row 1 -->
+  <div class="test row">
+
+      <h2 class="col-med-12 col-xs-12">Bootstrap Beautiful Mistake</h2>
+  </div>
+
+  <!-- row 2 -->
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+      <h3 class="col-md-4 col-sm-6">Section 1</h3>
+      <p>Stuff about 1...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+      <a href="#" class="col-md-6 col-sm-6">Click 1</a>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <h3 class="col-md-4 col-sm-6">Section 2</h3>
+      <p>Stuff about 2...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+      <a href="#" class="col-md-6 col-sm-6">Click 2</a>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <h3 class="col-md-4 col-sm-6">Section 3</h3>
+      <p>Stuff about 3...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni consequuntur velit? Modi, saepe fugit eum perferendis ex inventore porro, est, reprehenderit quos nostrum, asperiores. Voluptate ipsa exercitationem mollitia, eaque.</p>
+      <a href="#" class="col-md-6 col-sm-6">Click 3</a>
+    </div>
+  </div>
+
+  <!-- Row 1 Thumbnail Gallery -->
+  <div class="row">
+      <article class="col-md-8">
+      <h1>Bootstrap Thumbnail Gallery</h1>
+      <div class="row">
+        <div class="col-xs-6 col-med-6 thumbnail">
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" class="img-responsive">
+          <p class="caption">Lorem ipsum dolor sit amet, consectetur
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-6 thumbnail">
+            <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" class="img-responsive">
+            <p class="caption">Lorem ipsum dolor sit amet, consectetur
+            </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 thumbnail">
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" class="img-responsive">
+          <p class="caption">Lorem ipsum dolor sit amet, consectetur
+          </p>
+        </div>
+        <div class="col-xs-6 thumbnail">
+          <img src="http://lorempixel.com/400/200/sports/Dummy-Text/" class="img-responsive">
+          <p class="caption">Lorem ipsum dolor sit amet, consectetur
+          </p>
+        </div>
+      </div>
+      </article>
+  </div>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- table-bordered table-hover table-condensed -->
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <caption>Bootstrap Table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Address</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">Copyright 2015</td>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <th scope="row">Row 1</th>
+          <td>John Smith</td>
+          <td>j@j.com</td>
+          <td>123-123-1234</td>
+          <td>123 Easy Street</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Row 2</th>
+          <td>Betty Boop</td>
+          <td>b@b.com</td>
+          <td>456-456-4567</td>
+          <td>2 Good Ave</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Row 3</th>
+          <td>Pat Patterson</td>
+          <td>p@p.com</td>
+          <td>987-987-9876</td>
+          <td>56 Jump St</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- Tabs -->
+  <ul class="nav nav-tabs" id="nav-tabs">
+    <li>
+      <a href="#one" data-toggle="tab">
+        <span class="glyphicon glyphicon-pushpin">
+
+        </span>
+        One
+      </a>
+    </li>
+    <li>
+      <a href="#two" data-toggle="tab">
+        <span class="glyphicon glyphicon-arrow-left">
+
+        </span>
+        Two
+      </a>
+    </li>
+    <li>
+      <a href="#three" data-toggle="tab">
+        <span class="glyphicon glyphicon-fire">
+
+        </span>
+        Three
+      </a>
+    </li>
+    <li>
+      <a href="#four" data-toggle="tab">
+        <span class="glyphicon glyphicon-leaf">
+
+        </span>
+
+      </a>
+    </li>
+  </ul>
+
+   <div class="tab-content">
+     <div class="tab-pane fade active in" id="one">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nemo omnis quasi ducimus necessitatibus at quod facere, animi sapiente ipsa.
+        </p>
+     </div>
+
+      <div class="tab-pane fade" id="two">
+        <p>Tempore laboriosam saepe est porro deserunt quia nisi, fugiat aliquid harum autem suscipit consectetur, blanditiis dignissimos numquam nihil, illum dolorem.
+        </p>
+      </div>
+
+      <div class="tab-pane fade" id="three">
+        <p>Optio ab, accusamus doloremque quasi debitis aliquid, quis dignissimos iste animi natus voluptate, eum dicta, qui dolore vero aliquam esse!
+        </p>
+      </div>
+
+      <div class="tab-pane fade" id="four">
+        <p>Id facilis, et deserunt reiciendis nulla vitae saepe vel ipsam ea, asperiores voluptas molestiae ullam perspiciatis possimus sit ipsum laboriosam!
+        </p>
+      </div>
+   </div>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<!-- Accordian Panels -->
+
+  <div class="panel-group" id="accordion1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="#accOne" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1">
+            <span class="glyphicon glyphicon-pushpin">
+
+            </span>Panel 1
+          </a>
+        </h4>
+      </div> <!-- .panel-heading -->
+
+      <div id="accOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ducimus nisi magni, tempora hic voluptatum quis corporis dignissimos nesciunt beatae.</p>
+          <p><a href="#" class="btn btn-default data-toggle="tooltip" data-placement="bottom" title="Tooltips are great!" animation="true">Read More ...</a></p>
+        </div>
+      </div>
+    </div> <!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="#accTwo" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1">
+            <span class="glyphicon glyphicon-pushpin">
+
+            </span>Panel 2
+          </a>
+        </h4>
+      </div> <!-- .panel-heading -->
+
+      <div id="accTwo" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ducimus nisi magni, tempora hic voluptatum quis corporis dignissimos nesciunt beatae.</p>
+          <p><a href="#" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltips are great!" data-animation=true>Read More ...</a></p>
+        </div>
+      </div>
+    </div> <!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="#accThree" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1">
+            <span class="glyphicon glyphicon-font">
+
+            </span>Panel 3
+          </a>
+        </h4>
+      </div> <!-- .panel-heading -->
+
+      <div id="accThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ducimus nisi magni, tempora hic voluptatum quis corporis dignissimos nesciunt beatae.</p>
+          <p><a href="#" class="btn btn-default">Read More ...</a></p>
+        </div>
+      </div>
+    </div> <!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="#accFour" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1">
+            <span class="glyphicon glyphicon-pushpin">
+
+            </span>Panel 4
+          </a>
+        </h4>
+      </div> <!-- .panel-heading -->
+
+      <div id="accFour" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ducimus nisi magni, tempora hic voluptatum quis corporis dignissimos nesciunt beatae.</p>
+          <p><a href="#" class="btn btn-default">Read More ...</a></p>
+        </div>
+      </div>
+    </div> <!-- .panel .panel-default -->
+  </div><!-- .panel-group #accordion1 -->
+
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  another accordion example
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Rolly Bat
+          </a>
+        </h4>
+      </div><!-- .panel-heading -->
+
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-8 col-sm-8 col-md-8">Type of Game</div>
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                12-16yrs/2-50
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4">Active</div>
+              <div class="col-xs-4 col-sm-4 col-md-4">Outside</div>
+              <div class="col-xs-4 col-sm-4 col-md-4">
+                large
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">Stimulation:</div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                Rating:
+              </div>
+            </div><!-- .row -->
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">Source:</div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                Added By:
+              </div>
+            </div><!-- .row -->
+
+          </div><!-- .container-fluid -->
+        </div><!-- .panel-body -->
+      </div><!-- .panel-collapse .collapse .in -->
+    </div><!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Requirments
+          </a>
+        </h4>
+      </div><!-- .panel-heading -->
+
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          <ul>
+            <li> An outside area large enough to hit a baseball safely for the age group</li>
+            <li>a bat</li>
+            <li>a ball</li>
+            <li>optionally: baseball gloves</li>
+          </ul>
+        </div><!-- .panel-body -->
+      </div><!-- #collapseTwo .panel-collapse .collapse -->
+    </div><!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Directions
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          Pitcher pitches the ball to the batter until the batter hits the ball. If a fielder catches the ball in the air that person either gets to bat next or choose someone to bat next. If the batted ball touches the ground and the batter can touch it with the bat before a fielder gets to it, the batter can bat again. If a fielder fields the ball, she/she stays in the spot with the ball and the batter places the bat on the ground parallel to the fielder. The fielder then rolls or throws the ball to try to hit the bat. If he/she does that person gets to bat or choose the next person to bat.
+        </div><!-- .panel-body -->
+      </div><!-- .panel-collapse .collapse-->
+    </div><!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Adaptations
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="panel-body">
+          To make it harder the batter can swing the bat like a pendulum.
+          To make it easier the group can decide to give the fielder an x number of steps forward according to age or height or whatever the group decides. For very young children try using a whiffel bat and a beach ball and having them hit something much larger like the batter standing still.(with a beach ball not a hard ball)
+        </div><!-- .panel-body -->
+      </div><!-- .panel-collapse .collapse -->
+    </div><!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Restrictions
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+          Requires lots of movement and good hand-eye coordination.
+        </div><!-- .panel-body -->
+      </div><!-- .panel-collapse .collapse -->
+    </div><!-- .panel .panel-default -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSix">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Notes
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+        <div class="panel-body">
+          <input type="textarea" >
+        </div>
+
+      </div><!-- .panel-collapse collapse -->
+    </div><!-- .panel .panel-default -->
+
+  </div><!-- .panel-group #accordion -->
+
+
+  <!-- link to CDN for jquery
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+-->
+
+
+  <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  margin: 0 auto;
+  padding: 50px;
+  width: 100%;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+.glyphicon {
+  color: navy;
+}
+
+.active .glyphicon {
+  color: red;
+}
+
+.tab-panel {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 0.8em;
+}
+
+
